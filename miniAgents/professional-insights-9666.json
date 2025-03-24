@@ -1,0 +1,27 @@
+{
+  "_id": "3af555c0-0e34-467a-bd2a-505c8b7ea788",
+  "aiPersonaId": "bef81d81-628a-43e3-a097-e692c97eb4c4",
+  "integrationId": "professional-insights-9666",
+  "intentClassification": {
+    "modelId": "4cf651d9-edf3-455f-a22e-53cc67fcc07b"
+  },
+  "intents": [
+    {
+      "_id": "generate-professional-reports-9666",
+      "name": "Generate Professional Reports",
+      "description": "Offers detailed reports and insights for healthcare providers to aid in clinical decision-making.",
+      "examples": [
+        "Can you provide a report for the doctor?",
+        "What are the wound healing trends?",
+        "What risk assessments can you provide?"
+      ],
+      "flowType": "Workflow",
+      "workflowId": "582a3367-53ff-4780-a162-443c616f84c0"
+    }
+  ],
+  "name": "Professional Insights",
+  "primaryWorkflowId": "8dfc2bff-d0ca-4957-ba82-b86236465d04",
+  "publisherAccountId": "1b811ca0-0f6c-414e-8d16-5044f75fc7c9",
+  "scope": "Provides data-driven insights for medical professionals, including aggregated reports, wound healing trends, and AI-powered risk assessments.",
+  "status": "Active"
+}

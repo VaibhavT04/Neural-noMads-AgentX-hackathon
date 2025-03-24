@@ -1,0 +1,24 @@
+{
+  "_id": "0f274fdf-1e8f-4d74-af02-aa1beb945d9f",
+  "aiPersonaId": "bef81d81-628a-43e3-a097-e692c97eb4c4",
+  "integrationId": "provide-wound-care-instructions-2798",
+  "name": "Workflow for Provide Wound Care Instructions",
+  "publisherAccountId": "1b811ca0-0f6c-414e-8d16-5044f75fc7c9",
+  "startTaskId": "69960c7e-9337-4cf7-9f0a-a4edf2072fc1",
+  "status": "Active",
+  "tasks": [
+    {
+      "_id": "69960c7e-9337-4cf7-9f0a-a4edf2072fc1",
+      "transitions": [],
+      "type": "Display",
+      "config": {
+        "name": "Display",
+        "description": "Display the response to the user",
+        "type": "text",
+        "text": "Hi there! Intent $input.intent has been matched"
+      }
+    }
+  ],
+  "type": "Conversational",
+  "version": "latest"
+}

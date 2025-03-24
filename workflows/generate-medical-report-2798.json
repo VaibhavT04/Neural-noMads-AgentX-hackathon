@@ -1,0 +1,24 @@
+{
+  "_id": "4c09e8fc-2c9a-479f-ae69-0a7e0cd2ce1c",
+  "aiPersonaId": "bef81d81-628a-43e3-a097-e692c97eb4c4",
+  "integrationId": "generate-medical-report-2798",
+  "name": "Workflow for Generate Medical Report",
+  "publisherAccountId": "1b811ca0-0f6c-414e-8d16-5044f75fc7c9",
+  "startTaskId": "e467028e-1f6c-47ac-84bb-1a14c753c4b5",
+  "status": "Active",
+  "tasks": [
+    {
+      "_id": "e467028e-1f6c-47ac-84bb-1a14c753c4b5",
+      "transitions": [],
+      "type": "Display",
+      "config": {
+        "name": "Display",
+        "description": "Display the response to the user",
+        "type": "text",
+        "text": "Hi there! Intent $input.intent has been matched"
+      }
+    }
+  ],
+  "type": "Conversational",
+  "version": "latest"
+}

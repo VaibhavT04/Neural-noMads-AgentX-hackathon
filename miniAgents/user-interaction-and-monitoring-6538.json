@@ -1,0 +1,39 @@
+{
+  "_id": "f18530e5-da57-4397-89b7-ec5972e19f6e",
+  "aiPersonaId": "bef81d81-628a-43e3-a097-e692c97eb4c4",
+  "integrationId": "user-interaction-and-monitoring-6538",
+  "intentClassification": {
+    "modelId": "4cf651d9-edf3-455f-a22e-53cc67fcc07b"
+  },
+  "intents": [
+    {
+      "_id": "multimodal-interaction-6539",
+      "name": "Multimodal Interaction",
+      "description": "Allows users to input text-based symptom descriptions, voice commands, or chat-based queries for medical guidance.",
+      "examples": [
+        "Describe my symptoms in text.",
+        "Can I use voice commands to get advice?",
+        "How do I chat with the system?"
+      ],
+      "flowType": "Workflow",
+      "workflowId": "2883e464-be11-4f4f-ada5-1ee40f7062cc"
+    },
+    {
+      "_id": "track-healing-progress-6539",
+      "name": "Track Healing Progress",
+      "description": "Compares follow-up images to monitor wound healing and adjusts recommendations based on progress.",
+      "examples": [
+        "How is my wound healing over time?",
+        "Can you compare today's image with last week's?",
+        "Is my wound getting better or worse?"
+      ],
+      "flowType": "Workflow",
+      "workflowId": "7e2f015f-243e-489d-9ea7-f44abf4e6157"
+    }
+  ],
+  "name": "User Interaction and Monitoring",
+  "primaryWorkflowId": "d2a792e6-7349-4e6c-b8fb-81691721d944",
+  "publisherAccountId": "1b811ca0-0f6c-414e-8d16-5044f75fc7c9",
+  "scope": "Facilitates multimodal interactions with users, including text, voice, and chat-based queries. Manages continuous wound monitoring by comparing past and present images to track healing progress.",
+  "status": "Active"
+}

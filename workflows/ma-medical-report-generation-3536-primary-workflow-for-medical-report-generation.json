@@ -1,0 +1,329 @@
+{
+  "_id": "67a8e7b9-d9a0-4f2f-ad49-4d09f13dc1de",
+  "aiPersonaId": "bef81d81-628a-43e3-a097-e692c97eb4c4",
+  "integrationId": "ma-medical-report-generation-3536-primary-workflow-for-medical-report-generation",
+  "isMiniAgentPrimaryWorkflow": true,
+  "name": "Primary Workflow for Medical Report Generation",
+  "publisherAccountId": "1b811ca0-0f6c-414e-8d16-5044f75fc7c9",
+  "startTaskId": "9435ffb5-b597-44e7-9266-599c203c5868",
+  "status": "Active",
+  "tasks": [
+    {
+      "_id": "9435ffb5-b597-44e7-9266-599c203c5868",
+      "type": "PassThrough",
+      "config": {
+        "name": "Pass Through",
+        "description": "Pass through the input to the output"
+      },
+      "transitions": [
+        {
+          "_id": "8b79578b-9ef3-4133-9445-65079fb8e78f-9435ffb5-b597-44e7-9266-599c203c5868",
+          "nextTask": "8b79578b-9ef3-4133-9445-65079fb8e78f",
+          "name": "If query doesnt exists",
+          "rules": [
+            {
+              "type": "any",
+              "operator": "notExists",
+              "path": "$output.query"
+            }
+          ]
+        },
+        {
+          "_id": "efa124f5-7a58-438d-a2ac-562ad180899b-9435ffb5-b597-44e7-9266-599c203c5868",
+          "nextTask": "efa124f5-7a58-438d-a2ac-562ad180899b",
+          "name": "If intents are already classified",
+          "rules": [
+            {
+              "type": "any",
+              "operator": "exists",
+              "path": "$output.intents"
+            },
+            {
+              "type": "any",
+              "operator": "exists",
+              "path": "$output.query"
+            }
+          ]
+        },
+        {
+          "_id": "9435ffb5-b597-44e7-9266-599c203c5868-8a8901d5-83d0-4ed9-a82b-8d2578081017",
+          "name": "If query exists",
+          "nextTask": "8a8901d5-83d0-4ed9-a82b-8d2578081017",
+          "rules": [
+            {
+              "type": "any",
+              "operator": "exists",
+              "path": "$output.query"
+            },
+            {
+              "type": "any",
+              "operator": "notExists",
+              "path": "$output.intents"
+            }
+          ]
+        }
+      ],
+      "globalVariables": [
+        {
+          "name": "query",
+          "referencePath": "$input.query"
+        },
+        {
+          "name": "conversationId",
+          "referencePath": "$input.conversationId"
+        }
+      ]
+    },
+    {
+      "_id": "8b79578b-9ef3-4133-9445-65079fb8e78f",
+      "type": "Input",
+      "config": {
+        "name": "User Input",
+        "description": "Get user input",
+        "type": "string"
+      },
+      "transitions": [
+        {
+          "_id": "8b79578b-9ef3-4133-9445-65079fb8e78f-8a8901d5-83d0-4ed9-a82b-8d2578081017",
+          "name": "Default",
+          "nextTask": "8a8901d5-83d0-4ed9-a82b-8d2578081017"
+        }
+      ],
+      "globalVariables": [
+        {
+          "name": "query",
+          "referencePath": "$output.userInput"
+        },
+        {
+          "name": "selfLoopMiniAgent",
+          "referencePath": "true"
+        }
+      ]
+    },
+    {
+      "_id": "8a8901d5-83d0-4ed9-a82b-8d2578081017",
+      "type": "Loader",
+      "config": {
+        "name": "Loader",
+        "description": "Display loader message",
+        "type": "loader",
+        "text": "Just a moment... identifying the best approach to assist you."
+      },
+      "transitions": [
+        {
+          "_id": "8a8901d5-83d0-4ed9-a82b-8d2578081017-d018e266-9596-4ce9-88cc-8cca3c80b2e7",
+          "name": "Default",
+          "nextTask": "d018e266-9596-4ce9-88cc-8cca3c80b2e7"
+        }
+      ]
+    },
+    {
+      "_id": "d018e266-9596-4ce9-88cc-8cca3c80b2e7",
+      "type": "IntentClassification",
+      "config": {
+        "name": "Intent Classification",
+        "description": "Classify the intent of the user message",
+        "modelId": "4cf651d9-edf3-455f-a22e-53cc67fcc07b",
+        "intents": [
+          {
+            "name": "Generate Medical Report",
+            "description": "Creates an intuitive report highlighting the wound's risk level, possible causes, and treatment recommendations.",
+            "examples": [
+              "Can you generate a report for this wound?",
+              "What are the treatment steps for this wound?",
+              "Is this wound a cause for concern?"
+            ]
+          },
+          {
+            "name": "Provide Wound Care Instructions",
+            "description": "Offers guidance on cleaning, dressing, and preventing infection for the wound.",
+            "examples": [
+              "How should I clean this wound?",
+              "What dressing should I use?",
+              "How can I prevent infection?"
+            ]
+          }
+        ],
+        "query": "$agent.query"
+      },
+      "transitions": [
+        {
+          "_id": "d018e266-9596-4ce9-88cc-8cca3c80b2e7-efa124f5-7a58-438d-a2ac-562ad180899b",
+          "name": "If Intent is Matched",
+          "rules": [
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$output.intentMatched",
+              "value": "true"
+            }
+          ],
+          "nextTask": "efa124f5-7a58-438d-a2ac-562ad180899b"
+        },
+        {
+          "_id": "d018e266-9596-4ce9-88cc-8cca3c80b2e7-b63ac507-781a-4350-aad5-86c5434d4afb",
+          "name": "If No Intent is Matched",
+          "rules": [
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$output.intentMatched",
+              "value": "false"
+            }
+          ],
+          "nextTask": "b63ac507-781a-4350-aad5-86c5434d4afb"
+        }
+      ]
+    },
+    {
+      "_id": "efa124f5-7a58-438d-a2ac-562ad180899b",
+      "type": "JSFunction",
+      "config": {
+        "name": "JS Function",
+        "description": "Execute JS function",
+        "code": "\nconst main = () => {\n    const currentExecutionId = _id;\n    const intents = agent?.icIntents?.[currentExecutionId] || input.intents;\n    const currentIndex = agent?.icLoopIndexes?.[currentExecutionId] || 0;\n    const currentIntent = intents[currentIndex] || {};\n    const { intent, task } = currentIntent;\n    const state = currentIndex === intents.length ? 'end' : 'continue'\n    const icLoopIndexes = { ...(agent?.icLoopIndexes || {}), [_id]: state === 'end' ? undefined : currentIndex + 1 };\n    const icIntents = { ...(agent?.icIntents || {}), [_id]: state === 'end' ? undefined : intents };\n    return { ...input, intent, state: currentIndex === intents.length ? 'end' : 'continue', icLoopIndexes, icIntents, query: task };\n};\n\nmain()\n"
+      },
+      "globalVariables": [
+        {
+          "referencePath": "$output.icLoopIndexes",
+          "name": "icLoopIndexes"
+        },
+        {
+          "referencePath": "$output.icIntents",
+          "name": "icIntents"
+        }
+      ],
+      "transitions": [
+        {
+          "_id": "efa124f5-7a58-438d-a2ac-562ad180899b-75ab3b75-a2fa-47fe-971c-e5f1432ef814",
+          "name": "If Intent is Matched",
+          "rules": [
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$output.intent",
+              "value": "Generate Medical Report"
+            }
+          ],
+          "nextTask": "75ab3b75-a2fa-47fe-971c-e5f1432ef814"
+        },
+        {
+          "_id": "efa124f5-7a58-438d-a2ac-562ad180899b-4691d360-a87a-4d8a-9d88-12d85027854d",
+          "name": "If Intent is Matched",
+          "rules": [
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$output.intent",
+              "value": "Provide Wound Care Instructions"
+            }
+          ],
+          "nextTask": "4691d360-a87a-4d8a-9d88-12d85027854d"
+        },
+        {
+          "_id": "efa124f5-7a58-438d-a2ac-562ad180899b-8b79578b-9ef3-4133-9445-65079fb8e78f",
+          "name": "If Self Loop",
+          "rules": [
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$agent.selfLoopMiniAgent",
+              "value": "true"
+            },
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$output.state",
+              "value": "end"
+            }
+          ],
+          "nextTask": "8b79578b-9ef3-4133-9445-65079fb8e78f"
+        }
+      ]
+    },
+    {
+      "_id": "75ab3b75-a2fa-47fe-971c-e5f1432ef814",
+      "type": "Workflow",
+      "config": {
+        "name": "Intent - Generate Medical Report",
+        "description": "Workflow for intent - Generate Medical Report",
+        "workflowId": "4c09e8fc-2c9a-479f-ae69-0a7e0cd2ce1c"
+      },
+      "transitions": [
+        {
+          "_id": "75ab3b75-a2fa-47fe-971c-e5f1432ef814-efa124f5-7a58-438d-a2ac-562ad180899b",
+          "name": "Mini agent execution completed",
+          "nextTask": "efa124f5-7a58-438d-a2ac-562ad180899b"
+        }
+      ]
+    },
+    {
+      "_id": "4691d360-a87a-4d8a-9d88-12d85027854d",
+      "type": "Workflow",
+      "config": {
+        "name": "Intent - Provide Wound Care Instructions",
+        "description": "Workflow for intent - Provide Wound Care Instructions",
+        "workflowId": "0f274fdf-1e8f-4d74-af02-aa1beb945d9f"
+      },
+      "transitions": [
+        {
+          "_id": "4691d360-a87a-4d8a-9d88-12d85027854d-efa124f5-7a58-438d-a2ac-562ad180899b",
+          "name": "Mini agent execution completed",
+          "nextTask": "efa124f5-7a58-438d-a2ac-562ad180899b"
+        }
+      ]
+    },
+    {
+      "_id": "b63ac507-781a-4350-aad5-86c5434d4afb",
+      "transitions": [
+        {
+          "_id": "b63ac507-781a-4350-aad5-86c5434d4afb-8b79578b-9ef3-4133-9445-65079fb8e78f",
+          "name": "If Self Loop",
+          "rules": [
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$agent.selfLoopMiniAgent",
+              "value": "true"
+            }
+          ],
+          "nextTask": "8b79578b-9ef3-4133-9445-65079fb8e78f"
+        }
+      ],
+      "type": "Output",
+      "config": {
+        "name": "Output",
+        "description": "Output the response to the user",
+        "type": "external",
+        "text": "Unable to complete task $agent.query"
+      }
+    },
+    {
+      "_id": "b53bdf2e-369e-436d-a494-0695306e9ece",
+      "transitions": [
+        {
+          "_id": "b53bdf2e-369e-436d-a494-0695306e9ece-8b79578b-9ef3-4133-9445-65079fb8e78f",
+          "name": "If Self Loop",
+          "rules": [
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$agent.selfLoopMiniAgent",
+              "value": "true"
+            }
+          ],
+          "nextTask": "8b79578b-9ef3-4133-9445-65079fb8e78f"
+        }
+      ],
+      "type": "Display",
+      "config": {
+        "name": "Display",
+        "description": "Display the response to the user",
+        "type": "text",
+        "text": "$input.content"
+      }
+    }
+  ],
+  "type": "Conversational",
+  "version": "latest"
+}

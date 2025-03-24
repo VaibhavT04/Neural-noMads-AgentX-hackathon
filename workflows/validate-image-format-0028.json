@@ -1,0 +1,24 @@
+{
+  "_id": "325d4ede-4558-4568-af5e-877d6394987f",
+  "aiPersonaId": "bef81d81-628a-43e3-a097-e692c97eb4c4",
+  "integrationId": "validate-image-format-0028",
+  "name": "Workflow for Validate Image Format",
+  "publisherAccountId": "1b811ca0-0f6c-414e-8d16-5044f75fc7c9",
+  "startTaskId": "8ef46bab-c3bb-4746-a7fd-847ffa6065c7",
+  "status": "Active",
+  "tasks": [
+    {
+      "_id": "8ef46bab-c3bb-4746-a7fd-847ffa6065c7",
+      "transitions": [],
+      "type": "Display",
+      "config": {
+        "name": "Display",
+        "description": "Display the response to the user",
+        "type": "text",
+        "text": "Hi there! Intent $input.intent has been matched"
+      }
+    }
+  ],
+  "type": "Conversational",
+  "version": "latest"
+}

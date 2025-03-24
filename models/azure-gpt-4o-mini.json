@@ -1,0 +1,31 @@
+{
+  "_id": "4cf651d9-edf3-455f-a22e-53cc67fcc07b",
+  "creator": "OpenAI",
+  "name": "GPT 4o mini (Azure)",
+  "description": "Most cost-efficient small model that's smarter and cheaper than GPT-3.5 Turbo.",
+  "isFineTunable": false,
+  "isFineTuned": false,
+  "isJSONResponseSupported": true,
+  "onDemandProvisioning": false,
+  "status": "Active",
+  "type": "Chat",
+  "provider": "Azure",
+  "price": {
+    "input": {
+      "basePrice": 0.15
+    },
+    "output": {
+      "basePrice": 0.6
+    }
+  },
+  "providerModelId": "azure-gpt-4o-mini",
+  "supportedMimeTypes": [
+    "image/png",
+    "image/jpeg",
+    "image/jpg",
+    "image/webp",
+    "image/gif"
+  ],
+  "outgoingRequestIdentifierQuery": "body::jsonb ->> 'model' = 'azure-gpt-4o-mini'",
+  "supportsSafetySettings": true
+}
