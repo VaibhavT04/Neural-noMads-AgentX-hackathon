@@ -1,0 +1,195 @@
+{
+  "_id": "bef81d81-628a-43e3-a097-e692c97eb4c4",
+  "inferenceEngine": {
+    "modelId": "4cf651d9-edf3-455f-a22e-53cc67fcc07b"
+  },
+  "integrationId": "medisense-6527",
+  "integrations": {},
+  "intentClassification": {
+    "modelId": "4cf651d9-edf3-455f-a22e-53cc67fcc07b"
+  },
+  "name": "MediSense",
+  "publisherAccountId": "1b811ca0-0f6c-414e-8d16-5044f75fc7c9",
+  "status": "Active",
+  "useAsChatbot": true,
+  "variables": {
+    "secrets": []
+  },
+  "miniAgentIds": [
+    "078ad0dc-de96-4ba5-bc83-c524be5958d7",
+    "1a81cef8-970c-4bda-a221-233e43179172",
+    "f18530e5-da57-4397-89b7-ec5972e19f6e",
+    "3af555c0-0e34-467a-bd2a-505c8b7ea788"
+  ],
+  "description": "AI MediSense is an intelligent wound assessment and remedy suggestion agent that analyzes uploaded wound images, detects severity, and provides instant medical guidance. It classifies wounds, identifies infection risks, and recommends treatment steps, including home remedies and professional care alerts. MediSense tracks healing progress over time, sends dressing change reminders, and integrates with telemedicine for expert consultations. By automating wound evaluation and enhancing healthcare accessibility, MediSense ensures faster recovery and proactive medical intervention.",
+  "chatSuggestions": [
+    {
+      "label": "I want remedy recommendation",
+      "value": "give recommendations and remedy based on wound description"
+    }
+  ],
+  "chatbotTheme": {
+    "avatar": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAACfCAMAAABX0UX9AAAB7FBMVEX////9/f38//////3///v7/f75///n6PL//f////oAVGP//f34+/zg6Ovp8/UAIUHl5uwAPVAAHkSdqblZb33X4OgAJkKuvMMAKUl9kJwAG0cAL00AMUxLZnUAh4cAeH9tfJUAb3gAYGkASVMAP04ANURHYXqXqbS3xMwAOlgAXWsAanDL2OUAUmIASVwAZm+/4N+Oo6gAfX5+sLKYrrCmwceJq77C09WovswCM0hYi6tDWW4xTGYADzYA17AAj3aTxM3W6ugA1L0ANFoANV8AKlUAtqIAZ3gAp5sAV2x7oLGL0c/m9/O/6+QAfnQAnplko6WSuMpSlJpeiqosZXRlhYwAgWAAFC8AYGFUf5YAACQAKjnN0dcAABcAaUwAAAZz4c+37OS49OkHxqaW6tgAqI9NspkAv6OMytZFmomnzceWxd4AlnmRw7S+y913q8VK1cAApn4A6M8R0aUb/cq009tf8dF0rZx52sxevaml6tgA4rigxMIAxpsAj2s28OAUTXVlzMJls7AAL2kAEUNQWXM9jHZPdndun5pyl6EIzsEAnIpckoFWtbK0xL1El5RWpp4fcmNFc49GgnGCxLM4U2AAbk5gj4sAYVQ+w7Zze4lhfn5XkaEAPT9wlrM0RVBeZXGLjpA2PVKKqJ+WNExxAAAdp0lEQVR4nO2dj18TV9b/T2aSEeLMJcEMIZIQEwKZBEggvyaBCAkg6hjBIFhTUlerlMrXatc+2Kcr/eX6iKmt1O5SWzalP/hHn3NmEsT+2O73WStryOdVYTK/mHn3nHvOuffOBKCppppqqqmmmmqqqab2VZylhSuctYCZ2+8reTXVUrh85fLVs8Dv94W8UtqlVXiXvfnu1aWh59c29c91GESzmRauvXlt7Or00lv6WgvjzPt6Wa+M5NyqSL8vv3l1bHnp0Q0Bl7lkMSfs83W9GhJyb78t0wLaHhrf+HVaZsXcLWl/r+s/Wnp4ZbrVrebeHqC2rrC8tPTo0fgKrZOLuaK+URL37xr/g3UY/8n/b1VEbIdZPrdKoeLKWzfGx9/BBV4uDuQZ7XbzVtG0r9f5H6n82QL+HHo7x4zPh3IqjwYpSgSNAzkuQ6seT3K3bpH5qSuFfbza/zRdmbj9LgYGMafWVvAsWUBatWBhSubre0q3BvDnOx/9+YHQzKbrunz79tgV/L06tGdlK7Z+b76Zb3luT6aR8d14778+ykNTwHHknNcmJsbOos2tyi2mFl2Atsddu33tzt13yZ8FQTTEUoTv/RtL4wVqHS37fPn7Lc6Sx3yk8N8T1/CDeTVXF7nutdtvFi7f/fAD0NO+mnR8hevX0U5taXmfr37/NfR28RCa2soqfRBtTDKE4bVw9+6d23evLi9R5sLyNenJn6yRSaY07aBn0vxAsTjEtfL5M6s/R/GXu3fujo0hvg9+fpB8rthKUUTTDq7zCpA/c0UAi201l0dPzeeGWozkmckympgZi447Y4hv6ZFRdsgyE4wdBrSkhedYSlMYcGxnh+3vjeyTCssTV69RV8oA2h9w+TWMpbzgdJQ0reQpYzbz4XsffojGN/4+5nkeh8t1bPQIkRJT5Oi2eEqPKe9/8NGDA5kD/mXi44nPON5MfQTIjzehQ6azleD2V6UjNz1HEO+Hy1i2jc8MgfLTavCY49hXk26XCGa0UrOUiotU2OUvLC9/NPT7f6zxdHZ5YuIzw/GknAS8mS/3TX3yydTU1OTUZDqrwtCfseYdn0kAO5HOTk11dnZ2dbV3BjmeRwssGk3l0IWlpQsHLQWkZE+AM99++t9UpZl5vbyQj02GEN4nfX2fnJgKfTWKbK6Pz1zHuLv1iWeqMzTal+1s7wodzSp4iMmk958ObN97ML4CB64AEQS8Zw5aVvV+FPRgyTU1FQpNuWSKD7Ljr6FJ9FMQCpgZuk5MTo2WaT8pEWqbnGofHaidZWA7bSyIBWj5jb/UgBL+svwtVhnAt7SqFDyYujU5+cnUiWMSoaTm0DX5yYkgSKYWG5TvT016qKHjyWuPdHZOTh79H6ee/zGF17ughx5cWNvXG3q5Kkx/PKFnc4eIgtw2eeLE1NQJx54iguubnEqDQ0qPQhmNb09P6SHX0fYTJ+7ffz1In1TaIjxYHps5QOlLfvnjiXdpQYpT1Cw7RrN9mgz87miGBYJTiO+YbWAU5BOTfc+1bizY91NoNEgps7JNyLkHV+8epPjBXV5e/kBvrKTiqvwr/cdmSPx1ygVbktwHzhNTx6AOdm9fKSsHNd1g2fULFx4eoPDBcYV8LknYzOJqMVkQW3U8ot4TL5YJn/OvUyHXpk3KDoemDHw2Sd9ooz3NrWZRSm2nRTJL6Zw2dIBszxDL1bqWpWQuqSdx4g6yEJxlfa08GQpNnmCS3io69VXlINFVyjzlLJKmHZE4Ai1rmm1f7mA/xfMslwZeltCuDnM6PtO6mk8k6iGghPwIHybR2Zp7i8PDZdlj0zM+M6Y+ZlAxcKdSByhqQH5IqDVkyVXgikVOT6ILhYIALDEXx/UFiVaJo51kffhjUiZ3ZwQpHXHhBybhzpTJiFVN4FNFfQoCB4WVfMMn0CvT02/VuqYIn0SNlnDl0+np6VNnMEeOP1xZ26AOPp4Xg6MnbFJnn+uQjkfqGXa6HAyE5Ho47PdX9GERVQYz4tNVuDB+odGrX+Gtzz6ejq/qyuWMdYUPpk8ZWqFCrbu7+9yaqvvrMRtGXuB4Lp+MX4xaB5MIzBuNnjx58vTpSEU0rDiVSuuae/Tx9Of7dV8vRxy8NTExfS+ZK+aKxaLew8wPnapr9tQXBRDWZmaRYDcZ0paOD9gcEbM+RNOLR32E7zQqMm8k0+lUSiNtjC/feH8f7+2lKP/B8t+fWyGeqekLAjiL1AorG93d3hguHTtE+PK+kz5ffzwPfL7a7+v3z1VqGn7uRIX3L1wvNHzly9VaPlH6eS9n65lZ1FoB+MIaml+MIb4BLDjmvAiPhsvX+n2+6LlfTHVhlC7yh/GUDR85SJzeS5ArPqZkuHDW0NBZDCJnZ3WAiGrNG4utGfiGfF4fBuTCWiyK9HCJqdhwqqqiqqqesqSqwwwOBLldCbki4zjIf7o8/e233352dWxsbPlTAdD+zmDLlxNgIxbbMPDFvV5vAZLek/3xOd9JAZIz40tLj2aiYas1ElmQyY4PwpgRh23Xbm2Vyx3CgHqG2H377fTEXdL030GaPQPx+EZ3Dt6JxboNfOe83nMw1O+rxEGNJmC1fwn3fW8p5vf7w4ORQAJt+JCWJO+lERO1UWdgcfDO+PiXuRxNZJFTVOufmTUi7vTY3buFs3eXTwni7Oy9FXi7+xx6r1fH9z8wR/iSvjkQHvqiKpzrHrtTuPbehzOIz2odHAxQAFnVJGgJatrcN5eeNOrAkTg+cfXBqprDQiNHvcToqc/wCdzY1dmCgJ4bz8/9El/C51tdjZ5EfHMzd6/BX97787i/BzU42GNXwCxqabCVUsm/3bh9o1E7ToUby8vXMfFFfMVVnmNE78xQ/mz+7NUxGhKfnmWE79657l/Bh0E3F/X5EV/sw/+6+97y0pf5vCSrC4FIpAf9tZgCdl6GnQvLF1b2+z7/GAlw9vr1vI7PQhnzCuK7QomMAB8sX71757NZtL7u38LnQ3z+aBjxnex+d+zDpRkVBJqjVglEMs5dfMLnTx427sQNPblQ42h9Azx8MTv7BQj3MFM5hSXv5cKp2e6C2N29IazFYs/h8+n4oueEh4Tvqc+XvHLq0UYCWz6rSxB77KEFKj2AVWVo6PzFsIsaPowSGGZzeqZHXlxAv0V8M/dg1fur+OIQv0jWF42uCbF+nz8cDlsjTnDYIz2G9ZUIXwNP3RWTqZsAA3HeUhwAhrjOwL3Zms6wbsI3M/MlrMW8azAU83UbRducz/cOqCejFaj4CZ8/vCYiO/zPGo4Mw0LAbhcJn+28bGaalm7YB2hk7ZbG0PrMsBffmSFSvmVodchk4PPGBB6exnbxzaDZVk8SPgwdWGtIgqo+Xj89nzyt4wvt4gOlWl1o1MQPpIqmiRg6BCiqwCG+FbiHCPdIpKixGosVQJjzxjgd39N+L9Zk89FhiIfDz8Yyk4MVGLYjPrvdr7d90ogM5dJI5fBLv6+XJUmV+Do+JKfjy8FQPB7PxXUNzXTPYnodm1vDWiNG1odtX793LrngfypwX4bDa8NGX4ughk8vQBDxOQJ2l4HvfBkb1nSjjnvIaRt1FkgpBSyIj5diOr41yFG2Ql183RuFje7uL0WIxxBeLAZbNqkPNnxeX/TiUwEq0Wg0X7FSyJgHZ09kARI6voyq4xO07UMWjkaU8o3Y/GHDp6soIr5V3ixQn8qXNXz5te6NDQy456ivWYD4zEys38vp+Oai/f3ROQEe+qNRnzDsn59/Dt+CPSIQPh7k6jbp/Mjw71/MqydFSw+srqpDeLNkfRhbEd85A98GfsrDhm6C3Zin8AIJrc/WB0wUcRES/pMnT6LlnS4wA98gOm8mCFt2N7YIaH3YNijpdFpJlcr7fat/hFqflQOWFOJbjXkFlo8Z1ieseNc4CRdm8kMx5GdIx2co6T9Z5NaRXhLyVh1fD+IbFAvljFsGA1/97C/tll6mOGN8lgf02zhZn3dOWGMza9jSIT4Mt3FAfrEVxOedm5t7+jRpjHXIlblqtRqOnkzm508PJiDdYz1dxzcvJFkmIxvOexBklij3KBYBCl5vXD3nzdXxdcfQsGKxfowbPl39nI5vIUq9zJgm53pO++MgD/pPI75ghNq+3mHVYw+IvKCl9/vGXo4GtFtJjMK30PziPp+XCow4BlkLWl/MOwQSJi/xRDFOY2tRct5RqPZH/b54PDGsDg+vAQvTKBvhQ+tLBOy9oY4E8MVt6raXGrhiqykYv5VqwaYszoA75/NR+IiT3+bRZbtjz2b6SHP+KFqfzYNVWr+6u5pft4Yr85EgqIb1BQIdGGflbRrzlL8K7sMNvRxxta4QRYuj9YGQLKK9qBs162OtEPdSsre2tpZcTSZVbP5X/cmtQ5JHtdJMPqY4SUmkNw/qIJjBYeCjOZWylqTXlbBgPeQ2XrcLB2feukfGJeUtVFaJ+igZ2l+SwOGGL9F5vRt6u+f19q+jwTFXRz5/3yPhUiVMEzPC1sHowmB4eGEwD8K8gQ8rDijffBZshcd/+1z9jWt4lfX3peXlU/o4BIZgfWofLiEtwueNxbHEjfmGhBiyw49YZ1QQb9muG1Q6HD5JSZ8/PKjCPI1x+CuemvNugn4qS72jYO2d8QuXGm+2H3u0PDZ26h6NzXKsqBX1EVoW8/lykOjHsNE92x3zPkx6fXMPCSHG3fAa2qjDY1PXsdzwo/EtrFv9Cwk0w/5+fyRi4LMHTNDaCgPb2ykRbMrq6sz4Z8sXdvb7bl+4EN/tiekNrVJRMW7cSqVl2abji0MS8XV/ceZUN1LzouNxaXRgtLYI+a1it5Pjhq0VzLrl+UGrNerF8s4/GLFXYJjwmWQZw7k2okAQ88MnS59NfPRwv+/2xevLR1enHw2JomiGpJa6dSse12ys39s/B4Wnse5Tl+9MID+fCuqOBHHy1dPZ4GaQA9Flt2KxsQ75nTXI94Sjsdlrl2f7ewKbNvAEQgGOVSt6rZsGE5Z3719YWvr68X7f7AtXi3jvET3DbDa3wpCmaSpjrAW8/f39q8AxVrh8p4DlWkxQx0/FWN5/8nSIHotxeSg+BwbDVqewvjS+A+vWlaErY2OswBgHzozd7QABz5RGfJIZ6xlzy/sXGvQZj8O7+YRNrc3z2UF80STeP7t852xhaMYLa8u3Z+RC2LpJs0i3mNLhxN+OQM+q8OTO9FNYsK6wwtgdQsaCGbs9Y0x7BlXZnaFracyaV+8t1X8TRr3/wCxhGOjvv9gfm716d2Kp2xsrFK7PbIBqnUfTc3rstkObCz/g4kJgGBLffINx1xrun719d/ZiwG7vxX+Bn3XNS0mVa7ysT5eKHjbws3WJi8Sv39s9ffnb2Vh//zkQ8iCuRyQQFjqYQ5JGYRMbOaHHmgeJQSLSMxj2zs56rRh5EZ5bef50UrVUqjRm6SZo29ualqxLQeGNVgx+mLjMzsRSsf6nqpxcDy8ADH9nFxHfJmzaHfhp0OqUB1yBiBYexKp3UKeXwXIX8kmnM53WaxJnWqtulxqzuw/ECtLTUjUVU8WilkYXftx/ERPhi14fVb4r/iiN34bjIAR67EzH57H3SuAcPI3AIqEgpCORwUgg0Nu7uLip6sNPdDqjI1vDzKVaUn7/Wl5BcUE9u9gjSaMnizgJc+nExWi0H5O+NZp2RvjYXnwyOCNWq57qSQuRSE/gH4pToYaUQ3p7J2WopWppoTEf8+DFdFDZjYpm0UIPBCW4WjenmniIxYQCq099mOYtgPkfdsJn24T5wKYIw5HT9vmFYZDQaz3BRO2MILvolSSiuPtyybIWPAjvqWMpvW4z0ywf490twKg2o2p/Ner3S1ivteUJn9CDxYeA1GgTC0cigccg1N/1YtIf06q4GtNff6YWxeh2wqCRuqVpaURgY3pYCGNRVpmPngz7kypDSFYHuqQzm2VSVxYrD1gIRcrQKpfnqdb1JDYzbrf7NcaLRLGsYUxy1pVuXONjiSBKf4aF2vlbFW1bq1hg2O+vRsPWNfDRSFr4IhbFg4PriEHaKoe2kK/koFlUeT8GDWz/VJaxBzwRu5uBszqC2ta2q8G6jhyIFzNJGIVlsj6kNGyNw441vJ4M6/JfZKwH48SwwLb02sMVwqCrAFke4ou4gvbMP0DJZBhvuH2qWjqye2L+YAwZMXk3QCYj6yqNnPUMoqx+f48sED57dlOhpyh7M8gtIzH8iWUGZnvuXhfIDvtm/fhWSTog0CSnhMUqvUiu9k8ULcAi4R4n1N79lfeHCR+aWSaITJzfO2WPXcfXE7EnazuB2pvJuCjk1t9LV5NSbugXPA+PlKoLqNpTVZpWqWASUhm09iRreyA5A58dI2159FgQIc3X8am1UQzZbg91SCBXq+dRpbq++qr0ldjIb3dWg+Wy/LwkzizMo7HprhtQDXzf0fMGnOt1lR0fZVDujSzq+PJiJkDK2O2Lw/RkPh5f3qugExoZ329IXO8ZtFqt2PypHP7Ic2rEjpVGe5dky/Y5gNntCUHcJBPstetyuxP7fc37I0FV9mZmet6L4XJtvSeCLqzj8+Ca9QxGkzbCF3KBZO/BNNBlN/BlMu6syziHaKIhzMdG2WZSnI1Zrj1TK5cujVRZrbnH285X6x12opQPDOr4BmUzixjOK8n3HSIkentVOLQZ0PFlEhKrTyDVksC2q6WEfj4NW7+GnZhryCwsVKsju219GfE96xsuBGrOa2dKKBLAlE9xUW+yzW7vHYbNAFnf4m7/MimVgnKpWsWYgaITNuII717xrtJIKY1VGz1PqthAqqq1nEOAvD3y3QBEenoCTMVMOaCWv3cJIDipTz4ImxguEF/G7dRHN0hqVQEJz1fRCxmkty41ctpCYsOu53IzadsQJjCsN+CwMGeA8GGqbD9ONUf5+w57Hd+CIA67OxS0uG0jYbmJYVat0NO8eErJ5VIbcHrGb4qjl6Jhm1dLYMDUE6iwm+VMBJ231x7pwJSP/fCDTc1goRGEwUDvsDTgdC+WgakDuiTgnpUbjW53vxRTd0MlT69hcgS+SyibdsK3aO/9EWuOzuAwB87FDKLsCQTsTqc9EzDtqWuZ2rgdLL8pXrxJdy1Vq9vS3ulQ8ncYHtBVA0yaD/RK4HqjzI47QOx128vQ09vbu9iRWUzo7/EzJGF7J1OiLCniAbK+ZKmUCgZdVb3zXlCN97BgQ5dYpE6BjEtg8mKvCJvtZdbxmgj2DkVgzkXkl+n4Bz3hYEgEpbRdSoNzOFVq4Kl9v5RSqqqqGsSgWUYH3DaGeZzYfCk9i72B3gpLyouLaH3Hy+z1TbS+Rdxb6SDjO4LWqtCInbY9chPU0nk8Q1lRXF85f/+vNoxaZMYTB4062VlpT/vFqYnN3oBT9WQWgyB4yq7vGbZ9vZuK0ruYCSp70mKxdJMXFKObnhfLlgPkvBxfa/HMeNNsRKbmzKQkVX3ugYRe2tHbG8AQq1L0HejI9GYWFxdfI1Icum5S1N9iWrq522weoHRlV493HhtfUDSiW5+Y1qopvXpVFxcz1M65Hd/bAIYXMyT3a0brlh6p6l+aoOPTT/Nwp8FLtV/Vztfjl3aYJDG5KlPSxvPYqBkjZrJjsQMRvkaTvjc9mLZ0tL1GQ+L09pxqsAaLlWioSXK+/+DS3xr3+fvf1JPl239+QnXqCOYe/ECQXgSEgZjpeCTV6VzEaDDsLoOy6HQa7xk+MoDJDo1+BBXCV6Iy9+LMZ8tfN3qp+0tZEN/yE6PgaDFzWjWJ+LQ0SCMMzK24g7IF4uaW7QcGLurbo7S6ipurCFIdKdmgVVLp2M9nPpt+cvDwwdqFG0/e2S21imRVZH06Pk4pw1YZXG1l6fUfwLYJUpC+JxU3y+dpov357Vo/jRnyTy5c+vwAhg5u5Z0hDABBTZ8QRa+A5KGOD1Jp+EGGH0JlafQnELMwMEIuXccHA9u6h2sV/JDfWTuIocOQUq1WKGfWp0WtjpR1fEgzCVtOUP9Ulv/0I4YPUKs1fGwkaMKAgunywgI2m659vvz9FtYfGnW3UEdd+nxQeIbP2cugHGzH6OtxPcMHyvmgBcw2GesQrVQ66PhASdZrjvQIvUNEPl/DJ7+xKf9ol0FYeAPrslIdH/qxJhptnZAMHly3NUQxloN83gSp8/og4y6+Fnfb6z8ClHuP32forZTaGbMD5VKFgZTnKD4fwFHJX2rnyaUH8fNGymw4r4ZpjHNTAnHrp/IPPwJf3oMP8pXKxpMnT9kBqnL/mfJP6BuJarnbM3yocodL70nhDec9X5ubymIzS0szB3Sk9xd6PH51bOlBLQWURugFrjo+XvmTYvtTkDaoOr6R+kyOh+PLE48a8Mmr/5PyF9D6vjSWV558Q29O1xJUBP8UKsvuDrJGHZ/w5JsdI2isofWNN+azQ/8HvTM+88B4hpRduvERvflbCyI+zt2nyn2ZXXyPL818bbxVXXj/6wsN/J6+/18xqfZtu4Wvl9GNEZ/eyjnfKMtv/EhLAxQ6di59sftqSCl/kL7b6XdVj6I7ly4hIdv5kj4Gt1WWR/WtelVSePL1wfxCwH9ZLaB/m7Za+kqfouxSZAf9Fksj1Fkq5sWmx/4zGS7ccthpJIEuxfYD/TbLQbEV9G92a+pf15HRrQNf1f4b4o+4DnpV21RT/7JMTf0T7QO++ll/5eS7W3jT3r//syOeXdtz63/9gNq6P+h2Xj4+DJ/ZMt1QcNQJFhMnCAJnMgkCbXJlyxyS68tKPMt6PH19fR4wcbzLMyrxxmY6UM72efSNoGRdtOJI1okoxSOjoeyWRCvEPo9D/z1Ku7kksyDrS33H8C++0Jt52fh4LtR5YovuzdUexJvR3wWGl8HRxXjuK4Rvsl0CdtwdCoUyWdzGutwdQTrCcVShX+W2UMjtDnV1gfPoMf1MR4NgZtn2tmyorW0Aj3C2u9skItrmzmZD7Z02Tm6n07lH9b/z4vSy8XFcuc0T6hJ1fEc4XpzOs7euQOFUgS7G067Qe0MyHYivPSTSATzBcLg3ucOIr03RvdRkko9mBROHW47R/q42rEG2OjwMONfxYbRXh9vReQRzarHTLQLnwP9PcntWt7sXfD8vHR/eq6JbkYFPWMqzpaUCO1U4rOPTRynpASvWFqr9fehrlzfbZNjFR0NrR7NUchA+FOFjnR00t0Mok7l2RqTOTbAgvi56d87RBOH7I27nZeNrtbi7RGf71i6+6Xzh1Kd/L5wSCF9fV3YUVcPnQkk8MHcWhtGAnuEzET4w8eDs1PfPdqJ5tWWN+IH/nEddkG2XebI+ZUCxd0rovFk6ne1Vtz6l3UGNGRlFHd90YfpMDZ+7ixTqJHyT7ffvv461brDdBVJnlmv5NXwhY/8gNoi77ZpuxEeO0hOWnaH799v7GCfIbe7jx4+/Lr/i+GCr0+VMZ7GN23XewrR4dtrAZzgvV7M+mjAlWmCUjgi1yeZfwddWoo4Dct4yWh9PjQOA5M6kncGukEDW53SOdjqBrO+QTbK94Lt52fhAdLvbjh/vcDt28Z1Fx+U+XTLavqP6Mx4hI3QYnVG2tq7248c7u9CYCB/Pw158DgrbhE/swINMvOAoQ7Cr6/hxjL1lavsE2lfgGqPtA6XdU1YUpauLET4wWYYKwpClhQ3peR/io8Slhk/kLBYRfdeBBwQ77YKOzyJYkNIefCZTLfJ2YuQVXNg2jHYG8YitNpceOjhsBlUKHQKeTnixt/PS8Tna9ZHGvqNOcN0/QvcucBxH2Z/pWd5HSRs7nsm43V0ZYfSoHo2z6NeOTjeu6mBglu8b+Nod9QwS8+y2Tru7rUuS2jPULSMfdwtiWyfic2HjKbd34bFuu+VVzvtA9IwyC+bKzlGXXnWYTBZOJ2fgc41SWSF4NhHfpkdXftRjMbW0wPDoEXB5qNzYZMBLow6BbHnUVa9fTJwYHLVvuiT93BaLhXOMyszjQXy4M/7Tz+Z4obfz0q2PN85I3wNh+ZWTQ71Upff71/5+bS+of7URrdMrlb37g2AxWfTOaU6obeOMN/fVNnN/yO289MhrsewuWH5ZfhqryHRQlpp2t9VX6SZb37W+afew+ibT4d2jnx36YivefelxaSQ18f1bauL7t/S7+Jpqqqmmmmqqqaaaaqqppppqqqmmmmqqqaaaaqqppl4h/S9mUwKf/2U4UQAAAABJRU5ErkJggg=="
+  },
+  "openingMessage": "Hi there! Is there anything that I can help you with?",
+  "miniAgents": [
+    {
+      "_id": "078ad0dc-de96-4ba5-bc83-c524be5958d7",
+      "integrationId": "image-analysis-0529",
+      "intents": [
+        {
+          "_id": "validate-image-format-0529",
+          "name": "Validate Image Format",
+          "description": "Ensures that the uploaded file is in a supported image format (JPG, PNG) and prompts the user to re-upload if the format is incorrect.",
+          "examples": [
+            "I uploaded a PDF, can you accept it?",
+            "What image formats are supported?",
+            "Why can't I upload a Word document?"
+          ],
+          "flowType": "Workflow",
+          "workflowId": "325d4ede-4558-4568-af5e-877d6394987f"
+        },
+        {
+          "_id": "analyze-wound-characteristics-0529",
+          "name": "Analyze Wound Characteristics",
+          "description": "Uses deep learning models to assess wound features such as size, depth, and signs of infection, and classifies the wound type.",
+          "examples": [
+            "Can you analyze this wound image?",
+            "What type of wound is this?",
+            "Does this wound look infected?"
+          ],
+          "flowType": "Workflow",
+          "workflowId": "d57896d1-abe5-43e6-9045-73b898b02362"
+        }
+      ],
+      "name": "Image Analysis",
+      "scope": "Handles the processing and analysis of wound images uploaded by users. This includes validating file formats, analyzing wound characteristics such as size, depth, color variations, and detecting signs of infection using AI-driven image processing techniques.",
+      "miniAgentId": "078ad0dc-de96-4ba5-bc83-c524be5958d7"
+    },
+    {
+      "_id": "1a81cef8-970c-4bda-a221-233e43179172",
+      "integrationId": "medical-report-generation-3536",
+      "intents": [
+        {
+          "_id": "generate-medical-report-3536",
+          "name": "Generate Medical Report",
+          "description": "Creates an intuitive report highlighting the wound's risk level, possible causes, and treatment recommendations.",
+          "examples": [
+            "Can you generate a report for this wound?",
+            "What are the treatment steps for this wound?",
+            "Is this wound a cause for concern?"
+          ],
+          "flowType": "Workflow",
+          "workflowId": "4c09e8fc-2c9a-479f-ae69-0a7e0cd2ce1c"
+        },
+        {
+          "_id": "provide-wound-care-instructions-3536",
+          "name": "Provide Wound Care Instructions",
+          "description": "Offers guidance on cleaning, dressing, and preventing infection for the wound.",
+          "examples": [
+            "How should I clean this wound?",
+            "What dressing should I use?",
+            "How can I prevent infection?"
+          ],
+          "flowType": "Workflow",
+          "workflowId": "0f274fdf-1e8f-4d74-af02-aa1beb945d9f"
+        }
+      ],
+      "name": "Medical Report Generation",
+      "scope": "Generates detailed medical reports based on the analysis of wound images. The reports include risk levels, possible causes, recommended treatment steps, and best practices for wound care.",
+      "miniAgentId": "1a81cef8-970c-4bda-a221-233e43179172"
+    },
+    {
+      "_id": "3af555c0-0e34-467a-bd2a-505c8b7ea788",
+      "integrationId": "professional-insights-9666",
+      "intents": [
+        {
+          "_id": "generate-professional-reports-9666",
+          "name": "Generate Professional Reports",
+          "description": "Offers detailed reports and insights for healthcare providers to aid in clinical decision-making.",
+          "examples": [
+            "Can you provide a report for the doctor?",
+            "What are the wound healing trends?",
+            "What risk assessments can you provide?"
+          ],
+          "flowType": "Workflow",
+          "workflowId": "582a3367-53ff-4780-a162-443c616f84c0"
+        }
+      ],
+      "name": "Professional Insights",
+      "scope": "Provides data-driven insights for medical professionals, including aggregated reports, wound healing trends, and AI-powered risk assessments.",
+      "miniAgentId": "3af555c0-0e34-467a-bd2a-505c8b7ea788"
+    },
+    {
+      "_id": "f18530e5-da57-4397-89b7-ec5972e19f6e",
+      "integrationId": "user-interaction-and-monitoring-6538",
+      "intents": [
+        {
+          "_id": "multimodal-interaction-6539",
+          "name": "Multimodal Interaction",
+          "description": "Allows users to input text-based symptom descriptions, voice commands, or chat-based queries for medical guidance.",
+          "examples": [
+            "Describe my symptoms in text.",
+            "Can I use voice commands to get advice?",
+            "How do I chat with the system?"
+          ],
+          "flowType": "Workflow",
+          "workflowId": "2883e464-be11-4f4f-ada5-1ee40f7062cc"
+        },
+        {
+          "_id": "track-healing-progress-6539",
+          "name": "Track Healing Progress",
+          "description": "Compares follow-up images to monitor wound healing and adjusts recommendations based on progress.",
+          "examples": [
+            "How is my wound healing over time?",
+            "Can you compare today's image with last week's?",
+            "Is my wound getting better or worse?"
+          ],
+          "flowType": "Workflow",
+          "workflowId": "7e2f015f-243e-489d-9ea7-f44abf4e6157"
+        }
+      ],
+      "name": "User Interaction and Monitoring",
+      "scope": "Facilitates multimodal interactions with users, including text, voice, and chat-based queries. Manages continuous wound monitoring by comparing past and present images to track healing progress.",
+      "miniAgentId": "f18530e5-da57-4397-89b7-ec5972e19f6e"
+    }
+  ],
+  "rags": [],
+  "intentWorkflows": [
+    {
+      "_id": "0f274fdf-1e8f-4d74-af02-aa1beb945d9f",
+      "integrationId": "provide-wound-care-instructions-2798",
+      "name": "Workflow for Provide Wound Care Instructions"
+    },
+    {
+      "_id": "2883e464-be11-4f4f-ada5-1ee40f7062cc",
+      "integrationId": "multimodal-interaction-6607",
+      "name": "Workflow for Multimodal Interaction"
+    },
+    {
+      "_id": "325d4ede-4558-4568-af5e-877d6394987f",
+      "integrationId": "validate-image-format-0028",
+      "name": "Workflow for Validate Image Format"
+    },
+    {
+      "_id": "4c09e8fc-2c9a-479f-ae69-0a7e0cd2ce1c",
+      "integrationId": "generate-medical-report-2798",
+      "name": "Workflow for Generate Medical Report"
+    },
+    {
+      "_id": "582a3367-53ff-4780-a162-443c616f84c0",
+      "integrationId": "generate-professional-reports-8916",
+      "name": "Workflow for Generate Professional Reports"
+    },
+    {
+      "_id": "7e2f015f-243e-489d-9ea7-f44abf4e6157",
+      "integrationId": "track-healing-progress-6607",
+      "name": "Workflow for Track Healing Progress"
+    },
+    {
+      "_id": "d57896d1-abe5-43e6-9045-73b898b02362",
+      "integrationId": "analyze-wound-characteristics-0028",
+      "name": "Workflow for Analyze Wound Characteristics"
+    }
+  ]
+}
