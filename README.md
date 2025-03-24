@@ -28,8 +28,8 @@ cd MediSense
 ---
 
 🔗 **Stay Connected**
-- **GitHub**: [yourusername/MediSense-Agent](https://github.com/VaibhavT04/)
-- **LinkedIn**: [Your Profile](https://www.linkedin.com/in/vaibhav-tatkare-code/)
+- **GitHub**: [Link](https://github.com/VaibhavT04/)
+- **LinkedIn**: [Profile](https://www.linkedin.com/in/vaibhav-tatkare-code/)
 - **Email**: vaibhavtatkare2004@gmail.com
 
 📢 **Empowering AI-Driven Healthcare for Everyone!** 🚑
