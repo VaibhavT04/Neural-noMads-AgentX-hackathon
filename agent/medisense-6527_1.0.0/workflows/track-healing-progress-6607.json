@@ -1,0 +1,24 @@
+{
+  "_id": "7e2f015f-243e-489d-9ea7-f44abf4e6157",
+  "aiPersonaId": "bef81d81-628a-43e3-a097-e692c97eb4c4",
+  "integrationId": "track-healing-progress-6607",
+  "name": "Workflow for Track Healing Progress",
+  "publisherAccountId": "1b811ca0-0f6c-414e-8d16-5044f75fc7c9",
+  "startTaskId": "1e77bceb-64d9-40d4-af30-dade45e37f59",
+  "status": "Active",
+  "tasks": [
+    {
+      "_id": "1e77bceb-64d9-40d4-af30-dade45e37f59",
+      "transitions": [],
+      "type": "Display",
+      "config": {
+        "name": "Display",
+        "description": "Display the response to the user",
+        "type": "text",
+        "text": "Hi there! Intent $input.intent has been matched"
+      }
+    }
+  ],
+  "type": "Conversational",
+  "version": "latest"
+}

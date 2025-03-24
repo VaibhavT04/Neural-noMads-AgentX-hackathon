@@ -1,0 +1,24 @@
+{
+  "_id": "d57896d1-abe5-43e6-9045-73b898b02362",
+  "aiPersonaId": "bef81d81-628a-43e3-a097-e692c97eb4c4",
+  "integrationId": "analyze-wound-characteristics-0028",
+  "name": "Workflow for Analyze Wound Characteristics",
+  "publisherAccountId": "1b811ca0-0f6c-414e-8d16-5044f75fc7c9",
+  "startTaskId": "82ecd89c-f112-4b77-98dc-e7f24db0b6d0",
+  "status": "Active",
+  "tasks": [
+    {
+      "_id": "82ecd89c-f112-4b77-98dc-e7f24db0b6d0",
+      "transitions": [],
+      "type": "Display",
+      "config": {
+        "name": "Display",
+        "description": "Display the response to the user",
+        "type": "text",
+        "text": "Hi there! Intent $input.intent has been matched"
+      }
+    }
+  ],
+  "type": "Conversational",
+  "version": "latest"
+}

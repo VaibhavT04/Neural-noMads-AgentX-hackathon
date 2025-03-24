@@ -1,0 +1,24 @@
+{
+  "_id": "582a3367-53ff-4780-a162-443c616f84c0",
+  "aiPersonaId": "bef81d81-628a-43e3-a097-e692c97eb4c4",
+  "integrationId": "generate-professional-reports-8916",
+  "name": "Workflow for Generate Professional Reports",
+  "publisherAccountId": "1b811ca0-0f6c-414e-8d16-5044f75fc7c9",
+  "startTaskId": "df8a585c-4d0c-40e1-8af4-7151305f5714",
+  "status": "Active",
+  "tasks": [
+    {
+      "_id": "df8a585c-4d0c-40e1-8af4-7151305f5714",
+      "transitions": [],
+      "type": "Display",
+      "config": {
+        "name": "Display",
+        "description": "Display the response to the user",
+        "type": "text",
+        "text": "Hi there! Intent $input.intent has been matched"
+      }
+    }
+  ],
+  "type": "Conversational",
+  "version": "latest"
+}

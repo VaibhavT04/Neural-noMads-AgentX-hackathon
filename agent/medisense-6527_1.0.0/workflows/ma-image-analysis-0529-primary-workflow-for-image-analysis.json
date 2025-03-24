@@ -1,0 +1,329 @@
+{
+  "_id": "9d9f0cb1-1dad-4b38-93df-ad437cad7fac",
+  "aiPersonaId": "bef81d81-628a-43e3-a097-e692c97eb4c4",
+  "integrationId": "ma-image-analysis-0529-primary-workflow-for-image-analysis",
+  "isMiniAgentPrimaryWorkflow": true,
+  "name": "Primary Workflow for Image Analysis",
+  "publisherAccountId": "1b811ca0-0f6c-414e-8d16-5044f75fc7c9",
+  "startTaskId": "7a6abb15-0683-47bc-9586-eecc2f7c15f3",
+  "status": "Active",
+  "tasks": [
+    {
+      "_id": "7a6abb15-0683-47bc-9586-eecc2f7c15f3",
+      "type": "PassThrough",
+      "config": {
+        "name": "Pass Through",
+        "description": "Pass through the input to the output"
+      },
+      "transitions": [
+        {
+          "_id": "f6df98bc-fe9e-4876-a297-314a29015bd9-7a6abb15-0683-47bc-9586-eecc2f7c15f3",
+          "nextTask": "f6df98bc-fe9e-4876-a297-314a29015bd9",
+          "name": "If query doesnt exists",
+          "rules": [
+            {
+              "type": "any",
+              "operator": "notExists",
+              "path": "$output.query"
+            }
+          ]
+        },
+        {
+          "_id": "cb082354-e210-4068-8ea7-8d4b8c172c8d-7a6abb15-0683-47bc-9586-eecc2f7c15f3",
+          "nextTask": "cb082354-e210-4068-8ea7-8d4b8c172c8d",
+          "name": "If intents are already classified",
+          "rules": [
+            {
+              "type": "any",
+              "operator": "exists",
+              "path": "$output.intents"
+            },
+            {
+              "type": "any",
+              "operator": "exists",
+              "path": "$output.query"
+            }
+          ]
+        },
+        {
+          "_id": "7a6abb15-0683-47bc-9586-eecc2f7c15f3-40a4d29d-5f88-4b7b-bf58-a8f26cbaa7c1",
+          "name": "If query exists",
+          "nextTask": "40a4d29d-5f88-4b7b-bf58-a8f26cbaa7c1",
+          "rules": [
+            {
+              "type": "any",
+              "operator": "exists",
+              "path": "$output.query"
+            },
+            {
+              "type": "any",
+              "operator": "notExists",
+              "path": "$output.intents"
+            }
+          ]
+        }
+      ],
+      "globalVariables": [
+        {
+          "name": "query",
+          "referencePath": "$input.query"
+        },
+        {
+          "name": "conversationId",
+          "referencePath": "$input.conversationId"
+        }
+      ]
+    },
+    {
+      "_id": "f6df98bc-fe9e-4876-a297-314a29015bd9",
+      "type": "Input",
+      "config": {
+        "name": "User Input",
+        "description": "Get user input",
+        "type": "string"
+      },
+      "transitions": [
+        {
+          "_id": "f6df98bc-fe9e-4876-a297-314a29015bd9-40a4d29d-5f88-4b7b-bf58-a8f26cbaa7c1",
+          "name": "Default",
+          "nextTask": "40a4d29d-5f88-4b7b-bf58-a8f26cbaa7c1"
+        }
+      ],
+      "globalVariables": [
+        {
+          "name": "query",
+          "referencePath": "$output.userInput"
+        },
+        {
+          "name": "selfLoopMiniAgent",
+          "referencePath": "true"
+        }
+      ]
+    },
+    {
+      "_id": "40a4d29d-5f88-4b7b-bf58-a8f26cbaa7c1",
+      "type": "Loader",
+      "config": {
+        "name": "Loader",
+        "description": "Display loader message",
+        "type": "loader",
+        "text": "Just a moment... identifying the best approach to assist you."
+      },
+      "transitions": [
+        {
+          "_id": "40a4d29d-5f88-4b7b-bf58-a8f26cbaa7c1-32090292-4612-44c5-a4c5-af18d915747d",
+          "name": "Default",
+          "nextTask": "32090292-4612-44c5-a4c5-af18d915747d"
+        }
+      ]
+    },
+    {
+      "_id": "32090292-4612-44c5-a4c5-af18d915747d",
+      "type": "IntentClassification",
+      "config": {
+        "name": "Intent Classification",
+        "description": "Classify the intent of the user message",
+        "modelId": "4cf651d9-edf3-455f-a22e-53cc67fcc07b",
+        "intents": [
+          {
+            "name": "Validate Image Format",
+            "description": "Ensures that the uploaded file is in a supported image format (JPG, PNG) and prompts the user to re-upload if the format is incorrect.",
+            "examples": [
+              "I uploaded a PDF, can you accept it?",
+              "What image formats are supported?",
+              "Why can't I upload a Word document?"
+            ]
+          },
+          {
+            "name": "Analyze Wound Characteristics",
+            "description": "Uses deep learning models to assess wound features such as size, depth, and signs of infection, and classifies the wound type.",
+            "examples": [
+              "Can you analyze this wound image?",
+              "What type of wound is this?",
+              "Does this wound look infected?"
+            ]
+          }
+        ],
+        "query": "$agent.query"
+      },
+      "transitions": [
+        {
+          "_id": "32090292-4612-44c5-a4c5-af18d915747d-cb082354-e210-4068-8ea7-8d4b8c172c8d",
+          "name": "If Intent is Matched",
+          "rules": [
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$output.intentMatched",
+              "value": "true"
+            }
+          ],
+          "nextTask": "cb082354-e210-4068-8ea7-8d4b8c172c8d"
+        },
+        {
+          "_id": "32090292-4612-44c5-a4c5-af18d915747d-2062e563-a64e-4fb5-bca6-4d46dfef043d",
+          "name": "If No Intent is Matched",
+          "rules": [
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$output.intentMatched",
+              "value": "false"
+            }
+          ],
+          "nextTask": "2062e563-a64e-4fb5-bca6-4d46dfef043d"
+        }
+      ]
+    },
+    {
+      "_id": "cb082354-e210-4068-8ea7-8d4b8c172c8d",
+      "type": "JSFunction",
+      "config": {
+        "name": "JS Function",
+        "description": "Execute JS function",
+        "code": "\nconst main = () => {\n    const currentExecutionId = _id;\n    const intents = agent?.icIntents?.[currentExecutionId] || input.intents;\n    const currentIndex = agent?.icLoopIndexes?.[currentExecutionId] || 0;\n    const currentIntent = intents[currentIndex] || {};\n    const { intent, task } = currentIntent;\n    const state = currentIndex === intents.length ? 'end' : 'continue'\n    const icLoopIndexes = { ...(agent?.icLoopIndexes || {}), [_id]: state === 'end' ? undefined : currentIndex + 1 };\n    const icIntents = { ...(agent?.icIntents || {}), [_id]: state === 'end' ? undefined : intents };\n    return { ...input, intent, state: currentIndex === intents.length ? 'end' : 'continue', icLoopIndexes, icIntents, query: task };\n};\n\nmain()\n"
+      },
+      "globalVariables": [
+        {
+          "referencePath": "$output.icLoopIndexes",
+          "name": "icLoopIndexes"
+        },
+        {
+          "referencePath": "$output.icIntents",
+          "name": "icIntents"
+        }
+      ],
+      "transitions": [
+        {
+          "_id": "cb082354-e210-4068-8ea7-8d4b8c172c8d-cde08d39-8ea8-4180-a012-e6a3f9808e0d",
+          "name": "If Intent is Matched",
+          "rules": [
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$output.intent",
+              "value": "Validate Image Format"
+            }
+          ],
+          "nextTask": "cde08d39-8ea8-4180-a012-e6a3f9808e0d"
+        },
+        {
+          "_id": "cb082354-e210-4068-8ea7-8d4b8c172c8d-202f6344-8a26-462e-aaf1-77eae3cf4541",
+          "name": "If Intent is Matched",
+          "rules": [
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$output.intent",
+              "value": "Analyze Wound Characteristics"
+            }
+          ],
+          "nextTask": "202f6344-8a26-462e-aaf1-77eae3cf4541"
+        },
+        {
+          "_id": "cb082354-e210-4068-8ea7-8d4b8c172c8d-f6df98bc-fe9e-4876-a297-314a29015bd9",
+          "name": "If Self Loop",
+          "rules": [
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$agent.selfLoopMiniAgent",
+              "value": "true"
+            },
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$output.state",
+              "value": "end"
+            }
+          ],
+          "nextTask": "f6df98bc-fe9e-4876-a297-314a29015bd9"
+        }
+      ]
+    },
+    {
+      "_id": "cde08d39-8ea8-4180-a012-e6a3f9808e0d",
+      "type": "Workflow",
+      "config": {
+        "name": "Intent - Validate Image Format",
+        "description": "Workflow for intent - Validate Image Format",
+        "workflowId": "325d4ede-4558-4568-af5e-877d6394987f"
+      },
+      "transitions": [
+        {
+          "_id": "cde08d39-8ea8-4180-a012-e6a3f9808e0d-cb082354-e210-4068-8ea7-8d4b8c172c8d",
+          "name": "Mini agent execution completed",
+          "nextTask": "cb082354-e210-4068-8ea7-8d4b8c172c8d"
+        }
+      ]
+    },
+    {
+      "_id": "202f6344-8a26-462e-aaf1-77eae3cf4541",
+      "type": "Workflow",
+      "config": {
+        "name": "Intent - Analyze Wound Characteristics",
+        "description": "Workflow for intent - Analyze Wound Characteristics",
+        "workflowId": "d57896d1-abe5-43e6-9045-73b898b02362"
+      },
+      "transitions": [
+        {
+          "_id": "202f6344-8a26-462e-aaf1-77eae3cf4541-cb082354-e210-4068-8ea7-8d4b8c172c8d",
+          "name": "Mini agent execution completed",
+          "nextTask": "cb082354-e210-4068-8ea7-8d4b8c172c8d"
+        }
+      ]
+    },
+    {
+      "_id": "2062e563-a64e-4fb5-bca6-4d46dfef043d",
+      "transitions": [
+        {
+          "_id": "2062e563-a64e-4fb5-bca6-4d46dfef043d-f6df98bc-fe9e-4876-a297-314a29015bd9",
+          "name": "If Self Loop",
+          "rules": [
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$agent.selfLoopMiniAgent",
+              "value": "true"
+            }
+          ],
+          "nextTask": "f6df98bc-fe9e-4876-a297-314a29015bd9"
+        }
+      ],
+      "type": "Output",
+      "config": {
+        "name": "Output",
+        "description": "Output the response to the user",
+        "type": "external",
+        "text": "Unable to complete task $agent.query"
+      }
+    },
+    {
+      "_id": "beb05fd9-ba8c-479f-af00-a8a10667c2bc",
+      "transitions": [
+        {
+          "_id": "beb05fd9-ba8c-479f-af00-a8a10667c2bc-f6df98bc-fe9e-4876-a297-314a29015bd9",
+          "name": "If Self Loop",
+          "rules": [
+            {
+              "type": "string",
+              "operator": "equal",
+              "path": "$agent.selfLoopMiniAgent",
+              "value": "true"
+            }
+          ],
+          "nextTask": "f6df98bc-fe9e-4876-a297-314a29015bd9"
+        }
+      ],
+      "type": "Display",
+      "config": {
+        "name": "Display",
+        "description": "Display the response to the user",
+        "type": "text",
+        "text": "$input.content"
+      }
+    }
+  ],
+  "type": "Conversational",
+  "version": "latest"
+}

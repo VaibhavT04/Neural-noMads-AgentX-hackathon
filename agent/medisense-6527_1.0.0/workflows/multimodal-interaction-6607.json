@@ -1,0 +1,24 @@
+{
+  "_id": "2883e464-be11-4f4f-ada5-1ee40f7062cc",
+  "aiPersonaId": "bef81d81-628a-43e3-a097-e692c97eb4c4",
+  "integrationId": "multimodal-interaction-6607",
+  "name": "Workflow for Multimodal Interaction",
+  "publisherAccountId": "1b811ca0-0f6c-414e-8d16-5044f75fc7c9",
+  "startTaskId": "c2610d70-7c81-45eb-b4d3-47dcbd7337a0",
+  "status": "Active",
+  "tasks": [
+    {
+      "_id": "c2610d70-7c81-45eb-b4d3-47dcbd7337a0",
+      "transitions": [],
+      "type": "Display",
+      "config": {
+        "name": "Display",
+        "description": "Display the response to the user",
+        "type": "text",
+        "text": "Hi there! Intent $input.intent has been matched"
+      }
+    }
+  ],
+  "type": "Conversational",
+  "version": "latest"
+}
