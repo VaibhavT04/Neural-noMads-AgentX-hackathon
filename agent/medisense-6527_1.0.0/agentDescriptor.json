@@ -1,0 +1,83 @@
+{
+  "aiPersonaIntegrationId": "medisense-6527",
+  "version": "1.0.0",
+  "description": "AI Agent medisense-6527 package version 1.0.0",
+  "data": {
+    "workflows": [
+      [
+        "workflows",
+        "validate-image-format-0028.json"
+      ],
+      [
+        "workflows",
+        "analyze-wound-characteristics-0028.json"
+      ],
+      [
+        "workflows",
+        "ma-image-analysis-0529-primary-workflow-for-image-analysis.json"
+      ],
+      [
+        "workflows",
+        "generate-medical-report-2798.json"
+      ],
+      [
+        "workflows",
+        "provide-wound-care-instructions-2798.json"
+      ],
+      [
+        "workflows",
+        "ma-medical-report-generation-3536-primary-workflow-for-medical-report-generation.json"
+      ],
+      [
+        "workflows",
+        "multimodal-interaction-6607.json"
+      ],
+      [
+        "workflows",
+        "track-healing-progress-6607.json"
+      ],
+      [
+        "workflows",
+        "ma-user-interaction-and-monitoring-6538-primary-workflow-for-user-interaction-and-monitoring.json"
+      ],
+      [
+        "workflows",
+        "generate-professional-reports-8916.json"
+      ],
+      [
+        "workflows",
+        "ma-professional-insights-9666-primary-workflow-for-professional-insights.json"
+      ]
+    ],
+    "models": [
+      [
+        "models",
+        "azure-gpt-4o-mini.json"
+      ]
+    ],
+    "miniAgents": [
+      [
+        "miniAgents",
+        "image-analysis-0529.json"
+      ],
+      [
+        "miniAgents",
+        "medical-report-generation-3536.json"
+      ],
+      [
+        "miniAgents",
+        "user-interaction-and-monitoring-6538.json"
+      ],
+      [
+        "miniAgents",
+        "professional-insights-9666.json"
+      ]
+    ],
+    "aiPersonas": [
+      [
+        "aiPersonas",
+        "medisense-6527.json"
+      ]
+    ]
+  }
+}
