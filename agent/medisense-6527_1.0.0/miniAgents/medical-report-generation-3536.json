@@ -1,0 +1,39 @@
+{
+  "_id": "1a81cef8-970c-4bda-a221-233e43179172",
+  "aiPersonaId": "bef81d81-628a-43e3-a097-e692c97eb4c4",
+  "integrationId": "medical-report-generation-3536",
+  "intentClassification": {
+    "modelId": "4cf651d9-edf3-455f-a22e-53cc67fcc07b"
+  },
+  "intents": [
+    {
+      "_id": "generate-medical-report-3536",
+      "name": "Generate Medical Report",
+      "description": "Creates an intuitive report highlighting the wound's risk level, possible causes, and treatment recommendations.",
+      "examples": [
+        "Can you generate a report for this wound?",
+        "What are the treatment steps for this wound?",
+        "Is this wound a cause for concern?"
+      ],
+      "flowType": "Workflow",
+      "workflowId": "4c09e8fc-2c9a-479f-ae69-0a7e0cd2ce1c"
+    },
+    {
+      "_id": "provide-wound-care-instructions-3536",
+      "name": "Provide Wound Care Instructions",
+      "description": "Offers guidance on cleaning, dressing, and preventing infection for the wound.",
+      "examples": [
+        "How should I clean this wound?",
+        "What dressing should I use?",
+        "How can I prevent infection?"
+      ],
+      "flowType": "Workflow",
+      "workflowId": "0f274fdf-1e8f-4d74-af02-aa1beb945d9f"
+    }
+  ],
+  "name": "Medical Report Generation",
+  "primaryWorkflowId": "67a8e7b9-d9a0-4f2f-ad49-4d09f13dc1de",
+  "publisherAccountId": "1b811ca0-0f6c-414e-8d16-5044f75fc7c9",
+  "scope": "Generates detailed medical reports based on the analysis of wound images. The reports include risk levels, possible causes, recommended treatment steps, and best practices for wound care.",
+  "status": "Active"
+}

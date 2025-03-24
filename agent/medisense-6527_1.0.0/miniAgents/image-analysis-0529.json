@@ -1,0 +1,39 @@
+{
+  "_id": "078ad0dc-de96-4ba5-bc83-c524be5958d7",
+  "aiPersonaId": "bef81d81-628a-43e3-a097-e692c97eb4c4",
+  "integrationId": "image-analysis-0529",
+  "intentClassification": {
+    "modelId": "4cf651d9-edf3-455f-a22e-53cc67fcc07b"
+  },
+  "intents": [
+    {
+      "_id": "validate-image-format-0529",
+      "name": "Validate Image Format",
+      "description": "Ensures that the uploaded file is in a supported image format (JPG, PNG) and prompts the user to re-upload if the format is incorrect.",
+      "examples": [
+        "I uploaded a PDF, can you accept it?",
+        "What image formats are supported?",
+        "Why can't I upload a Word document?"
+      ],
+      "flowType": "Workflow",
+      "workflowId": "325d4ede-4558-4568-af5e-877d6394987f"
+    },
+    {
+      "_id": "analyze-wound-characteristics-0529",
+      "name": "Analyze Wound Characteristics",
+      "description": "Uses deep learning models to assess wound features such as size, depth, and signs of infection, and classifies the wound type.",
+      "examples": [
+        "Can you analyze this wound image?",
+        "What type of wound is this?",
+        "Does this wound look infected?"
+      ],
+      "flowType": "Workflow",
+      "workflowId": "d57896d1-abe5-43e6-9045-73b898b02362"
+    }
+  ],
+  "name": "Image Analysis",
+  "primaryWorkflowId": "9d9f0cb1-1dad-4b38-93df-ad437cad7fac",
+  "publisherAccountId": "1b811ca0-0f6c-414e-8d16-5044f75fc7c9",
+  "scope": "Handles the processing and analysis of wound images uploaded by users. This includes validating file formats, analyzing wound characteristics such as size, depth, color variations, and detecting signs of infection using AI-driven image processing techniques.",
+  "status": "Active"
+}
